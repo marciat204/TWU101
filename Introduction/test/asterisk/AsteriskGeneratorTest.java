@@ -14,4 +14,10 @@ public class AsteriskGeneratorTest {
 
     }
 
+    @Test
+    public void shouldPrintThreeAsterisk(){
+        AsteriskGenerator asteriskGenerator =  new AsteriskGenerator();
+        Assert.assertEquals("***", asteriskGenerator.generateHorizontal(3));
+    }
+
 }
