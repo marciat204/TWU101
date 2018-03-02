@@ -32,4 +32,10 @@ public class AsteriskGeneratorTest {
         Assert.assertEquals("*\n**\n***", asteriskGenerator.generateRightTriangle(3));
     }
 
+    @Test
+    public void shouldPrintPiramid(){
+        AsteriskGenerator asteriskGenerator =  new AsteriskGenerator();
+        Assert.assertEquals("  *\n ***\n*****", asteriskGenerator.generatePyramid(3));
+    }
+
 }
