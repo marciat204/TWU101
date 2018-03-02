@@ -22,4 +22,13 @@ public class AsteriskGenerator {
         asterisks = asterisks.trim();
         return asterisks;
     }
+
+    public String generateRightTriangle(int levels) {
+        String triangle = "";
+        for (int i = 1; i <= levels; i++) {
+            triangle = triangle.concat(generateHorizontal(i) + "\n");
+        }
+        triangle = triangle.trim();
+        return triangle;
+    }
 }

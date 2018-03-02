@@ -26,4 +26,10 @@ public class AsteriskGeneratorTest {
         Assert.assertEquals("*\n*\n*\n*", asteriskGenerator.generateVertical(4));
     }
 
+    @Test
+    public void shouldPrintThreeLevelRightTriangle(){
+        AsteriskGenerator asteriskGenerator =  new AsteriskGenerator();
+        Assert.assertEquals("*\n**\n***", asteriskGenerator.generateRightTriangle(3));
+    }
+
 }
