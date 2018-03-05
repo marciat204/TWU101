@@ -33,9 +33,21 @@ public class AsteriskGeneratorTest {
     }
 
     @Test
-    public void shouldPrintPiramid(){
+    public void shouldPrintPyramid(){
         AsteriskGenerator asteriskGenerator =  new AsteriskGenerator();
         Assert.assertEquals("  *\n ***\n*****", asteriskGenerator.generatePyramid(3));
+    }
+
+    @Test
+    public void shouldPrintFourLevelsDiamond(){
+        AsteriskGenerator asteriskGenerator =  new AsteriskGenerator();
+        Assert.assertEquals("   *\n  ***\n *****\n*******\n *****\n  ***\n   *", asteriskGenerator.generateDiamond(4));
+    }
+
+    @Test
+    public void shouldPrintFourLevelsDiamondWithName(){
+        AsteriskGenerator asteriskGenerator =  new AsteriskGenerator();
+        Assert.assertEquals("   *\n  ***\n *****\nMarcinha\n *****\n  ***\n   *", asteriskGenerator.generateDiamondWithName(4, "Marcinha"));
     }
 
 }
