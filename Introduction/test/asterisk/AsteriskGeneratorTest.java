@@ -47,7 +47,7 @@ public class AsteriskGeneratorTest {
     @Test
     public void shouldPrintFourLevelsDiamondWithName(){
         AsteriskGenerator asteriskGenerator =  new AsteriskGenerator();
-        Assert.assertEquals("   *\n  ***\n *****\nMarcinha\n *****\n  ***\n   *", asteriskGenerator.generateDiamondWithName(4, "Marcinha"));
+        Assert.assertEquals("   *\n  ***\n *****\nMarcinha\n *****\n  ***\n   *", asteriskGenerator.generateDiamond(4, "Marcinha"));
     }
 
 }

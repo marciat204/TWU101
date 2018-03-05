@@ -67,6 +67,16 @@ public class AsteriskGenerator {
     }
 
     public String generateDiamond(int levels) {
+        List<String> diamondLines = generateDiamondLines(levels);
+        if (levels > 0){
+            diamondLines.add(levels-1, generateHorizontal(2*levels-1));
+        }
+
+        String diamond = String.join("\n", diamondLines);
+        return diamond;
+    }
+
+    private List<String> generateDiamondLines(int levels){
         List<String> diamondLines = new LinkedList<>();
         List<String> upsidePyramid = generatePyramidLines(levels);
         if (upsidePyramid.size() > 0) {
@@ -76,14 +86,17 @@ public class AsteriskGenerator {
         Collections.reverse(bottomPyramid);
 
         diamondLines.addAll(upsidePyramid);
-        diamondLines.add(generateHorizontal(2*levels-1));
         diamondLines.addAll(bottomPyramid);
-        String diamond = String.join("\n", diamondLines);
-
-        return diamond;
+        return diamondLines;
     }
 
-    public String generateDiamondWithName(int levels, String name) {
-        return null;
+    public String generateDiamond(int levels, String name) {
+        List<String> diamondLines = generateDiamondLines(levels);
+        if (levels > 0){
+            diamondLines.add(levels-1, name);
+        }
+
+        String diamond = String.join("\n", diamondLines);
+        return diamond;
     }
 }
